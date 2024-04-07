@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block sitename %}QR Interface {% endblock %}
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+<h1>Hello, there!</h1>
+
+<img src="{{ url_for('video_feed') }}" height="400"/><br />
+
+<img src="{{ url_for('qr_code') }}" height="200" /><br />
+<p>{{tid}}</p>
+
+<embed src="beep.wav" autostart="false" width="0" height="0" id="sound1"
+       enablejavascript="true">
+
+{% endblock %}
